@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\employeeController;
+use App\Http\Controllers\PusherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,8 @@ Route::delete('/employee/{id}', [EmployeeController::class, 'destroy'])->name('e
 Route::get('/employee/{id}/edit', [employeeController::class, 'edit'])->name('employee.edit');
 Route::patch('/employee/{id}', [EmployeeController::class, 'update'])->name('employee.update');
 
-
+Route::get('/chat', 'App\Http\Controllers\PusherController@index');
+Route::post('/broadcast', 'App\Http\Controllers\PusherController@broadcast');
+Route::post('/receive', 'App\Http\Controllers\PusherController@receive');
 
 require __DIR__.'/auth.php';
