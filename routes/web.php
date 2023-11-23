@@ -44,8 +44,6 @@ Route::get('/test-caching', function () {
     $productController = new ProductController();
 
     $startTime = microtime(true);
-
-    // Fetch resellers and products (with caching)
     $resellers = $resellerController->index();
     $products = $productController->index();
 
