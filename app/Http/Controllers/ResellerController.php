@@ -17,7 +17,7 @@ class ResellerController extends Controller
             return Reseller::all();
         });
 
-        return view('resellers.index', compact('resellers'));
+        return view('resellers', compact('resellers'));
     }
 
     public function show($id)

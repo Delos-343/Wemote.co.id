@@ -23,6 +23,7 @@ class ProductController extends Controller
     public function show($id)
     {
         $minutes = 30;
+        
         $product = Cache::remember('product_' . $id, $minutes, function () use ($id) {
             return Product::findOrFail($id);
         });
