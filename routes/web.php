@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ResellerController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Cache;
 use Inertia\Inertia;
 
 /*
@@ -33,6 +36,40 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+Route::get('/test-caching', function () {
+
+    $resellerController = new ResellerController();
+    $productController = new ProductController();
+
+    $startTime = microtime(true);
+
+    // Fetch resellers and products (with caching)
+    $resellers = $resellerController->index();
+    $products = $productController->index();
+
+    $endTime = microtime(true);
+    $executionTimeWithCaching = $endTime - $startTime;
+
+    Cache::flush();
+
+    $startTimeWithoutCaching = microtime(true);
+
+    $resellersWithoutCaching = $resellerController->index();
+    $productsWithoutCaching = $productController->index();
+
+    $endTimeWithoutCaching = microtime(true);
+    $executionTimeWithoutCaching = $endTimeWithoutCaching - $startTimeWithoutCaching;
+
+    return view('test-caching', compact(
+        'resellers',
+        'products',
+        'resellersWithoutCaching',
+        'productsWithoutCaching',
+        'executionTimeWithCaching',
+        'executionTimeWithoutCaching'
+    ));
 });
 
 require __DIR__.'/auth.php';
