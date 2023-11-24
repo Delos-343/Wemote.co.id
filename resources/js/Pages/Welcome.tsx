@@ -69,6 +69,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }: PageProps<
                                         />
                                     </svg>
                                     Sponsor
+                                    &nbsp;
                                 </a>
                             </div>
                         </div>
