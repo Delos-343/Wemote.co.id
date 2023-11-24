@@ -73,7 +73,9 @@ export default function Welcome({ auth, laravelVersion, phpVersion }: PageProps<
                             </div>
                         </div>
 
-                        <div className="ms-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-end sm:ms-0">
+                        <div className="block mx-5"></div>
+
+                        <div className="ms-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-center sm:ms-0">
                             Laravel v{laravelVersion} (PHP v{phpVersion})
                         </div>
                     </div>
