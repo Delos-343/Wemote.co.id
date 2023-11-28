@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 
-const CoverVideo = React.lazy(() => import('../components/CoverVideo'));
+const Hero = React.lazy(() => import('../components/Hero'));
 const Navbar = React.lazy(() => import('../components/Navbar'));
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
     <section className="relative min-h-screen overflow-hidden" id="home">
       <Suspense fallback={<></>}>
         <Navbar />
-        <CoverVideo />
+        <Hero />
       </Suspense>
     </section>
   );
