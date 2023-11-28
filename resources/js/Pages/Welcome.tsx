@@ -1,5 +1,6 @@
 import { Link, Head } from '@inertiajs/react';
 import { PageProps } from '@/types';
+import Home from '@/Layouts/Home';
 
 export default function Welcome({ auth, laravelVersion, phpVersion }: PageProps<{ laravelVersion: string, phpVersion: string }>) {
     return (
@@ -82,6 +83,8 @@ export default function Welcome({ auth, laravelVersion, phpVersion }: PageProps<
                     </div>
                 </div>
             </div>
+
+            <Home />
 
             <style>{`
                 .bg-dots-darker {
