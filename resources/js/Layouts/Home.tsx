@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react';
 
-const Hero = React.lazy(() => import('../components/Hero'));
-const Navbar = React.lazy(() => import('../components/Navbar'));
+import { Hero, Navbar } from '../Components';
 
 const Home = () => {
   return (
