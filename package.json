@@ -27,6 +27,7 @@
     "dependencies": {
         "framer-motion": "^10.16.5",
         "gsap": "^3.12.2",
-        "locomotive-scroll": "^4.1.4"
+        "locomotive-scroll": "^4.1.4",
+        "react-locomotive-scroll": "^0.2.2"
     }
 }
