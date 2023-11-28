@@ -4,25 +4,30 @@ import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+
   const [click, setClick] = useState(false);
   const { scroll } = useLocomotiveScroll();
 
-  const handleScroll = (id) => {
+  const handleScroll = (id: any) => {
+
     let elem = document.querySelector(id);
+
     setClick(!click);
+
     scroll.scrollTo(elem, {
       offset: '-100',
       duration: '2000',
       easing: [0.25, 0.0, 0.35, 1.0],
     });
+
   };
 
   return (
     <motion.div
       className={`absolute ${
-        click ? 'top-0' : `-${/* replace with your theme.navHeight value */}`
+        click ? 'top-0' : 'top-10'
       } transition-all duration-300 z-10 w-full flex justify-center items-center ${
-        click ? '' : 'md:top-calc(-50vh - 4rem)' /* replace with your media query value */
+        click ? '' : 'md:top-calc(-50vh - 4rem)'
       }`}
     >
       <motion.ul className="relative h-/* replace with your theme.navHeight */ bg-body text-text flex justify-around items-center list-none w-full px-10 md:flex-col md:px-0 md:h-/* replace with your media query value */">
@@ -38,13 +43,13 @@ const Navbar = () => {
           whileTap={{ scale: 0.9, y: 0 }}
           onClick={() => handleScroll('#home')}
         >
-          <Link to="/"> Home </Link>
+          <Link to="/"> Dashboard </Link>
         </motion.li>
         <motion.li
           className="uppercase text-text md:flex-col md:py-0.5 md:px-0"
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, y: 0 }}
-          onClick={() => handleScroll('#home')}
+          onClick={() => handleScroll('#team')}
         >
           <Link to="/"> Our Team </Link>
         </motion.li>
