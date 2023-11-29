@@ -352,6 +352,16 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.18.20.tgz#786c5f41f043b07afb1af37683d7c33668858f6d"
   integrity sha512-kTdfRcSiDfQca/y9QIkng02avJ+NCaQvrMejlsB3RRv5sE9rRoeBPISaZpKxHELzRxZyLvNts1P27W3wV+8geQ==
 
+"@fontsource/kaushan-script@^5.0.17":
+  version "5.0.17"
+  resolved "https://registry.yarnpkg.com/@fontsource/kaushan-script/-/kaushan-script-5.0.17.tgz#fe9dcec09c8f5e1fa178791f4b00c5efbdab6dd4"
+  integrity sha512-9LGGHgmiW1c1G2XwIBt6oHd33uB7SfvU/huJ7aEkG3Ztc7heUTxDkZQB0XLVLCG3T9RSW5LAvtlKZFTxBs6bfQ==
+
+"@fontsource/sirin-stencil@^5.0.17":
+  version "5.0.17"
+  resolved "https://registry.yarnpkg.com/@fontsource/sirin-stencil/-/sirin-stencil-5.0.17.tgz#a18e84a0e0d4c36265e61823939c5796db523edf"
+  integrity sha512-Ad42q8DDK6Wz0jNBJLB9/pY69WbOjbEXgArOz46n2rY3Is2hFtXr5L3izAtsqtUfpRV6f52nS6hxGp8tnFZzeQ==
+
 "@headlessui/react@^1.4.2":
   version "1.7.17"
   resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.7.17.tgz#a0ec23af21b527c030967245fd99776aa7352bc6"

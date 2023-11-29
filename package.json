@@ -25,6 +25,8 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "@fontsource/kaushan-script": "^5.0.17",
+        "@fontsource/sirin-stencil": "^5.0.17",
         "framer-motion": "^10.16.5",
         "gsap": "^3.12.2",
         "locomotive-scroll": "^4.1.4",
