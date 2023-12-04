@@ -1,5 +1,6 @@
 import { Link, Head } from '@inertiajs/react';
 import { PageProps } from '@/types';
+import { Hero, Navbar } from '@/Components';
 
 export default function Welcome({ auth, laravelVersion, phpVersion }: PageProps<{ laravelVersion: string, phpVersion: string }>) {
     return (
@@ -83,11 +84,10 @@ export default function Welcome({ auth, laravelVersion, phpVersion }: PageProps<
                 </div>
             </div>
 
-            <div className="p-5">
-                <h1 className="font-bold my-4 text-center">
-                    Hello, World.
-                </h1>
-            </div>
+            <>
+                <Navbar />
+                <Hero />
+            </>
 
             <style>{`
                 .bg-dots-darker {
