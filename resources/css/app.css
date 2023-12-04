@@ -6,45 +6,16 @@
 @tailwind components;
 @tailwind utilities;
 
-html.has-scroll-smooth {
-    overflow: hidden;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;  
-}
-
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: "Bungee", sans-serif;
-    overflow-x: hidden;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
 /* Main Theme */
 :root {
     --light-body: #fff;
-    --light-text: #202020; /* black shade */
+    --light-text: #202020;
     --light-body-rgba: 255, 255, 255;
     --light-text-rgba: 32, 32, 32;
     --light-grey: #bebebe;
     --font-xs: 0.75em;
     --font-sm: 0.875em;
-    --font-md: 1em; /* 1em = 16px */
+    --font-md: 1em;
     --font-lg: 1.25em;
     --font-xl: 2em;
     --font-xxl: 3em;
@@ -56,7 +27,7 @@ a {
 /* Dark Theme */
 [data-theme="dark"] {
     --dark-body: #202020;
-    --dark-text: #fff; /* black shade */
+    --dark-text: #fff;
     --dark-body-rgba: 32, 32, 32;
     --dark-text-rgba: 255, 255, 255;
 }
