@@ -28,6 +28,7 @@
     "dependencies": {
         "@fontsource/kaushan-script": "^5.0.17",
         "@fontsource/sirin-stencil": "^5.0.17",
-        "framer-motion": "^10.16.5"
+        "framer-motion": "^10.16.5",
+        "react-router-dom": "^6.20.1"
     }
 }
