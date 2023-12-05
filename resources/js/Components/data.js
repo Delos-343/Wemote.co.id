@@ -1,10 +1,14 @@
-import floating1 from '/public/floating/floating_1.jpg';
-import floating2 from '/public/floating/floating_2.jpg';
-import floating3 from '/public/floating/floating_3.jpg';
-import floating4 from '/public/floating/floating_4.jpg';
-import floating5 from '/public/floating/floating_5.jpg';
-import floating6 from '/public/floating/floating_6.jpg';
-import floating7 from '/public/floating/floating_7.jpg';
+import scpIcon from "./../../../public/icons/scp-logo.svg";
+import divisionIcon from "./../../../public/icons/division-logo.svg";
+import itsIcon from "./../../../public/icons/its-logo.svg";
+
+import floating1 from './../../../public/floating/floating_1.png';
+import floating2 from './../../../public/floating/floating_2.png';
+import floating3 from './../../../public/floating/floating_3.png';
+import floating4 from './../../../public/floating/floating_4.png';
+import floating5 from './../../../public/floating/floating_5.png';
+import floating6 from './../../../public/floating/floating_6.png';
+import floating7 from './../../../public/floating/floating_7.png';
 
 export {
     floating1, 
