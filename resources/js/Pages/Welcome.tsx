@@ -1,9 +1,27 @@
 import { Link, Head } from '@inertiajs/react';
 import { PageProps } from '@/types';
-import { Hero } from '@/Components';
+import { Hero, IconHolder, ImageHolder } from '@/Components';
 import GlobalStyles from '@/Styles/GlobalStyles';
+import { useEffect } from 'react';
+import { useCycle } from 'framer-motion';
+import { fadhlanScene, fachryScene, pbkkScene } from "@/Components/data";
+
+const SLIDE_CHANGE_TIME_MS = 5000;
 
 export default function Welcome({ auth, laravelVersion, phpVersion }: PageProps<{ laravelVersion: string, phpVersion: string }>) {
+
+    const [currentScene, setCurrentScene] = useCycle(
+        fadhlanScene,
+        fachryScene,
+        pbkkScene
+    );
+    
+    useEffect(() => {
+        const timeOut = setTimeout(setCurrentScene, SLIDE_CHANGE_TIME_MS);
+        return () => clearTimeout(timeOut);
+    }, [currentScene, setCurrentScene]);
+    
+
     return (
         <>
             <Head title="Welcome" />
@@ -88,6 +106,19 @@ export default function Welcome({ auth, laravelVersion, phpVersion }: PageProps<
             <>
                 <GlobalStyles />
                 <Hero />
+                <IconHolder icon={currentScene.icon} text={currentScene.text} />
+                <ImageHolder
+                  img={currentScene.image1}
+                  className="animal-image animal-image__one"
+                />
+                <ImageHolder
+                  img={currentScene.image2}
+                  className="animal-image animal-image__two"
+                />
+                <ImageHolder
+                  img={currentScene.image3}
+                  className="animal-image animal-image__three"
+                />
             </>
 
             <style>{`
