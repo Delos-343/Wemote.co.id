@@ -1,6 +1,7 @@
 import { Link, Head } from '@inertiajs/react';
 import { PageProps } from '@/types';
-import { Hero, Navbar } from '@/Components';
+import { Hero } from '@/Components';
+import GlobalStyles from '@/Styles/GlobalStyles';
 
 export default function Welcome({ auth, laravelVersion, phpVersion }: PageProps<{ laravelVersion: string, phpVersion: string }>) {
     return (
@@ -85,7 +86,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }: PageProps<
             </div>
 
             <>
-                <Navbar />
+                <GlobalStyles />
                 <Hero />
             </>
 
