@@ -10,14 +10,12 @@ ${'' /* *{
 }  */}
 
 body {
-   margin: 0;
-   font-family: sans-serif;
-   color: #354358;
+  overflow: hidden;
+  margin: 0;
+  font-family: 'Kaushan Script';
+  color: #354358;
 }
 
-/*******************************
-  Hero background
-********************************/
 .hero {
   position: relative;
 
@@ -32,9 +30,6 @@ body {
   overflow: hidden;
 }
 
-/*******************************
-  Central icon and text
-********************************/
 .icon-holder {
   position: relative;
   z-index: 1;
@@ -43,18 +38,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  background-color: rgba(255, 253, 247, 0.5);
-  box-shadow: 0 0 10px 10px rgba(255, 253, 247, 0.5);
-  border-radius: 3rem;
+  
   padding: 2rem;
-  height: 19rem;
+  height: 100%;
+  width: 100%;
 }
 
 .icon-holder__icon {
-  position: absolute;
-  top: 0;
-  width: 16rem;
+  width: 250px;
 }
 
 .icon-holder__icon img {
@@ -62,15 +53,11 @@ body {
 }
 
 .icon-holder__text {
+  width: 100%;
   font-size: 4rem;
-  font-family: Arial, Helvetica, sans-serif;
-  position: absolute;
-  bottom: 0;
+  font-family: 'Sirin Stencil';
 }
 
-/*******************************
-  Animal images
-********************************/
 .watch-image {
   position: absolute;
 }
@@ -80,36 +67,30 @@ body {
 }
 
 .watch-image__one {
-  left: -7rem;
-  width: 40vw;
-  max-width: 550px;
-}
-
-.watch-image__two {
-  top: 0;
-  right: 0;
-  width: 40vw;
+  left: 7rem;
+  width: 10vw;
   max-width: 390px;
 }
 
-.watch-image__three {
-  bottom: 0;
-  right: 0;
-  width: 40vw;
-  max-width: 290px;
+.watch-image__two {
+  top: 5rem;
+  right: 14rem;
+  width: 20vw;
+  max-width: 190px;
 }
 
-/*******************************
-  Responsive changes
-********************************/
+.watch-image__three {
+  bottom: 3rem;
+  right: 16rem;
+  width: 30vw;
+  max-width: 90px;
+}
+
 @media screen and (max-width: 876px) {
   .hero {
     height: 70vh;
   }
 
-  /*******************************
-    Icon and text cover
-  ********************************/
   .icon-holder {
     width: 100%;
     height: 100%;
@@ -122,9 +103,6 @@ body {
     max-width: 10rem;
   }
 
-  /*******************************
-    Reposition images
-  ********************************/
   .watch-image__one {
     top: -5rem;
     width: 80vw;
