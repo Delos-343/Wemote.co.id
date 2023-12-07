@@ -12,7 +12,7 @@ ${'' /* *{
 body {
   overflow: hidden;
   margin: 0;
-  font-family: 'Kaushan Script';
+  font-family: 'Sirin Stencil';
   color: #354358;
 }
 
@@ -53,9 +53,11 @@ body {
 }
 
 .icon-holder__text {
+  margin-top: 3rem;
   width: 100%;
-  font-size: 4rem;
-  font-family: 'Sirin Stencil';
+  font-size: 2.5rem;
+  font-family: 'Kaushan Script';
+  text-align: center;
 }
 
 .watch-image {
@@ -68,15 +70,15 @@ body {
 
 .watch-image__one {
   left: 7rem;
-  width: 10vw;
-  max-width: 390px;
+  width: 50vw;
+  max-width: 250px;
 }
 
 .watch-image__two {
   top: 5rem;
   right: 14rem;
   width: 20vw;
-  max-width: 190px;
+  max-width: 180px;
 }
 
 .watch-image__three {

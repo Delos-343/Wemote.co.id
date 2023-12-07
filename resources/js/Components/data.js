@@ -39,7 +39,7 @@ export const fachryScene = {
 export const pbkkScene = {
     icon: { src: itsIcon, alt: "ITS Icon" },
     text: "FP - PBKK",
-    image1: { src: floating3, alt: "Watch" },
-    image2: { src: floating5, alt: "Watch" },
+    image1: { src: floating1, alt: "Watch" },
+    image2: { src: floating3, alt: "Watch" },
     image3: { src: floating7, alt: "Watch" },
 };
