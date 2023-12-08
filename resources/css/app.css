@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
@@ -31,3 +32,8 @@
     --dark-body-rgba: 32, 32, 32;
     --dark-text-rgba: 255, 255, 255;
 }
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+>>>>>>> 7c68d75602681d5912517472dcb1f8f0aa6275e2
