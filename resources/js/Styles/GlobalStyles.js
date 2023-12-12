@@ -1,6 +1,3 @@
-import '@fontsource/sirin-stencil';
-import '@fontsource/kaushan-script';
-
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
@@ -12,7 +9,7 @@ ${'' /* *{
 body {
   overflow: hidden;
   margin: 0;
-  font-family: 'Sirin Stencil';
+  font-family: 'Sirin Stencil', sans-serif;
   color: #354358;
 }
 
@@ -56,7 +53,7 @@ body {
   margin-top: 3rem;
   width: 100%;
   font-size: 2.5rem;
-  font-family: 'Kaushan Script';
+  font-family: 'Kaushan Script', serif;
   text-align: center;
 }
 

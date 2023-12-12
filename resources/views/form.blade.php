@@ -17,18 +17,18 @@
                     </div>
 
                     <div class="mb-4" style="display: flex; flex-direction: column;">
-                        <label for="productID">productID:</label>
+                        <label for="productID">Product ID:</label>
                         <input type="text" name="productID" placeholder="Ex: 123XXXXX" id="productID" required>
                     </div>
 
                     <div class="mb-4" style="display: flex; flex-direction: column;">
-                        <label for="owner">owner:</label>
+                        <label for="owner">Owner:</label>
                         <input type="text" name="owner" placeholder="Ex: CEO" id="owner" required>
                     </div>
 
                     <div class="mb-4" style="display: flex; flex-direction: column;">
-                        <label for="location">location:</label>
-                        <input type="text" name="location" placeholder="Ex: Male" id="location" required>
+                        <label for="location">Location:</label>
+                        <input type="text" name="location" placeholder="Ex: ID" id="location" required>
                     </div>
                     <div class="mb-4" style="display: flex; flex-direction: column;">
                         <label for="description">Description:</label>
