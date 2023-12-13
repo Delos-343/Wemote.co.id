@@ -31,6 +31,12 @@ export default function Authenticated({ user, header, children }: PropsWithChild
                                 <NavLink href={route('employee.show')} active={route().current('employee.show')}>
                                     Our Products
                                 </NavLink>
+                                <Link
+                                    href="/chat"
+                                    className="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 transition duration-150 ease-in-out focus:outline-none text-gray-500 active:text-gray-900"
+                                >
+                                    Contact Us
+                                </Link>
                             </div>
                         </div>
 
