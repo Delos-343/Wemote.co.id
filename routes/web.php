@@ -49,7 +49,8 @@ Route::delete('/employee/{id}', [EmployeeController::class, 'destroy'])->name('e
 Route::get('/employee/{id}/edit', [employeeController::class, 'edit'])->name('employee.edit');
 Route::patch('/employee/{id}', [EmployeeController::class, 'update'])->name('employee.update');
 
-Route::get('/chat', 'App\Http\Controllers\PusherController@index');
+Route::get('/chat', [PusherController::class, 'index'])->name('chat');
+
 Route::post('/broadcast', 'App\Http\Controllers\PusherController@broadcast');
 Route::post('/receive', 'App\Http\Controllers\PusherController@receive');
 
