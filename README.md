@@ -6,7 +6,8 @@ Mohammed Fachry Dwi Handoko <br>
 5025201159 <br>
 
 Muhammad Fadhlan Ashila Harashta <br>
-5025211068 <br>
+5025211068 <br><br>
+Video Link: https://youtu.be/m21gGAwJbec
 
 <br>
 <br>
