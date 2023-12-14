@@ -36,7 +36,7 @@ class EmployeeController extends Controller // Use the correct class name
             'owner' => $request->owner,
             'location' => $request->location,
             'description' => $request->description,
-            'productImage' => $request->url,
+            'productImage' => $request->productImage,
         ]);
 
         return redirect('/show')->with('success', 'Successfully added!');
