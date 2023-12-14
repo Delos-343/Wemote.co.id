@@ -51,21 +51,13 @@
                             Image URL:
                         </label>
                         <input type="text" name="productImage" placeholder="Enter Image URL" id="productImage" required class="border rounded p-2 focus:outline-none focus:border-blue-500">
-                        <div class="mt-2">
-                            <img id="previewImage" class="max-w-full h-auto" alt="Preview Image" />
-                        </div>
                     </div>
 
-                    <button type="submit" class="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600 focus:outline-none">Submit</button>
+                    <button type="submit" class="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600 focus:outline-none">
+                        Submit
+                    </button>
                 </form>
             </div>
         </div>
     </div>
-    <script>
-        // Function to update the image preview
-        document.getElementById('productImage').addEventListener('input', function (e) {
-            const imagePreview = document.getElementById('previewImage');
-            imagePreview.src = e.target.value;
-        });
-    </script>
 </x-app-layout>

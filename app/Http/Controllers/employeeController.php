@@ -7,20 +7,6 @@ use App\Models\Employee; // Use the correct model name
 
 class EmployeeController extends Controller // Use the correct class name
 {
-    public function imageToBase64($imagePath)
-    {
-        try {
-            $imageData = file_get_contents($imagePath);
-            if ($imageData === false) {
-                throw new \Exception("Failed to read the image file.");
-            }
-            
-            $base64Encoded = base64_encode($imageData);
-            return $base64Encoded;
-        } catch (\Exception $e) {
-            return null;
-        }
-    }
 
     public function index(){
         return view('form');
@@ -34,21 +20,13 @@ class EmployeeController extends Controller // Use the correct class name
             'owner' => 'required',
             'location' => 'required',
             'description' => 'required',
-            'productImage' => 'required|url'
         ], [
             'productName.required' => 'productName can\'t be empty!',
             'productID.required' => 'productID can\'t be empty!',
             'owner.required' => 'owner can\'t be empty!',
             'location.required' => 'location can\'t be empty!',
             'description.required' => 'Description can\'t be empty!',
-            'productImage.required' => 'Image can\'t be empty!'
         ]);
-
-        $imageBase64 = $this->imageToBase64($request->productImage);
-
-        if (!$imageBase64) {
-            return redirect('/')->with('error', 'Failed to process the image.');
-        }
 
         Employee::create([
             'productName' => $request->productName, 
@@ -56,7 +34,6 @@ class EmployeeController extends Controller // Use the correct class name
             'owner' => $request->owner,
             'location' => $request->location,
             'description' => $request->description,
-            'image' => $imageBase64,
         ]);
 
         return redirect('/show')->with('success', 'Successfully added!');

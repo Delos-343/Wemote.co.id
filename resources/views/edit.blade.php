@@ -45,14 +45,11 @@
                     <input type="text" name="description" placeholder="Add a description" id="description" value="{{ $employee->description }}" required>
                 </div>
 
-                <div class="flex flex-col">
-                    <label for="productImage" class="font-semibold">
+                <div class="flex flex-col mb-4">
+                    <label for="productImage">
                         Image URL:
                     </label>
                     <input type="text" name="productImage" value="{{ $employee->productImage }}" placeholder="Enter Image URL" id="productImage" required class="border rounded p-2 focus:outline-none focus:border-blue-500">
-                    <div class="mt-2">
-                        <img id="previewImage" src="{{ $employee->productImage }}" class="max-w-full h-auto" alt="Preview Image" />
-                    </div>
                 </div>
         
                 <div class="flex justify-between">
