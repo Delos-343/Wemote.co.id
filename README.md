@@ -7,7 +7,8 @@ Mohammed Fachry Dwi Handoko <br>
 
 Muhammad Fadhlan Ashila Harashta <br>
 5025211068 <br><br>
-Video Link: https://youtu.be/m21gGAwJbec
+Video Link: https://youtu.be/m21gGAwJbec<br>
+NOTE: The Edit function for CRUD is already working but not yet in the video
 
 <br>
 <br>
