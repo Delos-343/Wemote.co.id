@@ -1,12 +1,14 @@
 # Proposal-PBKK-23
 
 Created by <br>
-
+NOTE: THE CODE IS IN THE MASTER BRANCH
 Mohammed Fachry Dwi Handoko <br>
 5025201159 <br>
 
 Muhammad Fadhlan Ashila Harashta <br>
-5025211068 <br>
+5025211068 <br><br>
+Video Link: https://youtu.be/m21gGAwJbec<br>
+NOTE: The Edit function for CRUD is already working but not yet in the video
 
 <br>
 <br>
