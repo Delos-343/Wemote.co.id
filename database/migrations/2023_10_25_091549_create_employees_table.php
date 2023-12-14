@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('owner');
             $table->string('location');
             $table->string('description');
-            // $table->longText('image');
+            $table->longText('productImage');
             $table->timestamps();
         });
     }
