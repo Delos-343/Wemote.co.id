@@ -26,7 +26,7 @@ export default function Authenticated({ user, header, children }: PropsWithChild
                                     Dashboard
                                 </NavLink>
                                 <NavLink href={route('employee')} active={route().current('employee')}>
-                                    New Products
+                                    Create New
                                 </NavLink>
                                 <NavLink href={route('employee.show')} active={route().current('employee.show')}>
                                     Our Products
@@ -104,6 +104,21 @@ export default function Authenticated({ user, header, children }: PropsWithChild
                     <div className="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink href={route('dashboard')} active={route().current('dashboard')}>
                             Dashboard
+                        </ResponsiveNavLink>
+                    </div>
+                    <div className="pt-2 pb-3 space-y-1">
+                        <ResponsiveNavLink href={route('employee')} active={route().current('employee')}>
+                            Create New
+                        </ResponsiveNavLink>
+                    </div>
+                    <div className="pt-2 pb-3 space-y-1">
+                        <ResponsiveNavLink href={route('employee.show')} active={route().current('employee.show')}>
+                            Our Products
+                        </ResponsiveNavLink>
+                    </div>
+                    <div className="pt-2 pb-3 space-y-1">
+                        <ResponsiveNavLink href={route('chat')} active={route().current('chat')}>
+                            Contact Us
                         </ResponsiveNavLink>
                     </div>
 

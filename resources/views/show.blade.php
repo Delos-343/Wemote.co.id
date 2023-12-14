@@ -8,7 +8,10 @@
     <div class="py-12 px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             @foreach ($employees as $employee)
-                <div class="bg-white p-4 rounded-lg shadow-md">
+                <div class="relative bg-white p-4 rounded-lg shadow-md">
+                    <div class="absolute top-0 right-0 mt-2 mr-2 z-10 rounded-full overflow-hidden border-2 border-white">
+                        <img src="https://avatars.githubusercontent.com/u/87126965?v=4" alt="{{ $employee->productName }}" class="w-24 h-24 md:w-32 md:h-32 object-cover" />
+                    </div>
                     <h4 class="text-lg font-semibold">
                         {{ $employee->productName }}
                     </h4>
