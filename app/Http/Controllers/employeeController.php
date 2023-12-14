@@ -73,10 +73,8 @@ class EmployeeController extends Controller // Use the correct class name
     public function edit($id)
     {
         $employee = Employee::findOrFail($id);
-
-        return view('employee.edit', compact('employee'));
+        return view('/edit', compact('employee'));
     }
-
 
     public function update(Request $request, $id)
     {
@@ -86,12 +84,6 @@ class EmployeeController extends Controller // Use the correct class name
             'owner' => 'required',
             'location' => 'required',
             'description' => 'required',
-        ], [
-            'productName.required' => 'Name can\'t be empty!',
-            'productID.required' => 'NRP can\'t be empty!',
-            'owner.required' => 'Position can\'t be empty!',
-            'location.required' => 'Gender can\'t be empty!',
-            'description.required' => 'Description can\'t be empty!',
         ]);
 
         $employee = Employee::findOrFail($id);
@@ -106,7 +98,4 @@ class EmployeeController extends Controller // Use the correct class name
 
         return redirect('/show')->with('success', 'Employee updated successfully');
     }
-
-    
-
 }

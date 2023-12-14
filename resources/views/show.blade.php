@@ -12,19 +12,24 @@
                     <h4 class="text-lg font-semibold">
                         {{ $employee->productName }}
                     </h4>
-                    <p>
-                        Product ID: {{ $employee->productID }}
+                    <p class="text-sm">
+                        ID: {{ $employee->productID }}
                     </p>
                     <br />
                     <p>
-                        Owner: {{ $employee->owner }}
+                        {{ $employee->owner }}
                     </p>
                     <p>
-                        Location: {{ $employee->location }}
+                        {{ $employee->location }}
                     </p>
                     <br />
-                    <p className="mt-10">
-                        Description: {{ $employee->description }}
+                    <p className="mt-10 font-semibold">
+                        Description
+                        <hr />
+                        <br />
+                        <span class="text-gray-500 font-normal">
+                            {{ $employee->description }}
+                        </span>
                     </p>
                     <br />
                     <div class="flex w-full justify-between items-center space-x-3">
@@ -42,4 +47,23 @@
             @endforeach
         </div>
     </div>
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditModal()">&times;</span>
+            <iframe id="editFrame" src="" width="100%" height="500px"></iframe>
+        </div>
+    </div>
+    <script>
+        function openEditModal(editUrl) {
+            var modal = document.getElementById('editModal');
+            var editFrame = document.getElementById('editFrame');
+            editFrame.src = editUrl;
+            modal.style.display = 'block';
+        }
+
+        function closeEditModal() {
+            var modal = document.getElementById('editModal');
+            modal.style.display = 'none';
+        }
+    </script>
 </x-app-layout>
