@@ -16,29 +16,43 @@
                     </label>
                     <input type="text" name="productName" placeholder="Ex: F-22 Raptor" id="productName" value="{{ $employee->productName }}" required>
                 </div>
+
                 <div class="flex flex-col mb-4">
                     <label for="productID">
                         Product ID:
                     </label>
                     <input type="text" name="productID" placeholder="Ex: 123XXXXX" id="productID" value="{{ $employee->productID }}" required>
                 </div>
+
                 <div class="flex flex-col mb-4">
                     <label for="owner">
                         Manufacturer:
                     </label>
                     <input type="text" name="owner" placeholder="Ex: Lockheed Martin" id="owner" value="{{ $employee->owner }}" required>
                 </div>
+
                 <div class="flex flex-col mb-4">
                     <label for="location">
                         Location:
                     </label>
                     <input type="text" name="location" placeholder="Ex: USA" id="location" value="{{ $employee->location }}" required>
                 </div>
+
                 <div class="flex flex-col mb-4">
                     <label for="description">
                         Description:
                     </label>
                     <input type="text" name="description" placeholder="Add a description" id="description" value="{{ $employee->description }}" required>
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="productImage" class="font-semibold">
+                        Image URL:
+                    </label>
+                    <input type="text" name="productImage" value="{{ $employee->productImage }}" placeholder="Enter Image URL" id="productImage" required class="border rounded p-2 focus:outline-none focus:border-blue-500">
+                    <div class="mt-2">
+                        <img id="previewImage" src="{{ $employee->productImage }}" class="max-w-full h-auto" alt="Preview Image" />
+                    </div>
                 </div>
         
                 <div class="flex justify-between">

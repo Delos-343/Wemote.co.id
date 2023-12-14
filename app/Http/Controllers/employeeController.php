@@ -7,7 +7,8 @@ use App\Models\Employee; // Use the correct model name
 
 class EmployeeController extends Controller // Use the correct class name
 {
-    public function imageToBase64($imagePath) {
+    public function imageToBase64($imagePath)
+    {
         try {
             $imageData = file_get_contents($imagePath);
             if ($imageData === false) {
@@ -17,7 +18,6 @@ class EmployeeController extends Controller // Use the correct class name
             $base64Encoded = base64_encode($imageData);
             return $base64Encoded;
         } catch (\Exception $e) {
-            // Handle the error properly, e.g., log it or return an error response
             return null;
         }
     }
@@ -34,17 +34,21 @@ class EmployeeController extends Controller // Use the correct class name
             'owner' => 'required',
             'location' => 'required',
             'description' => 'required',
-            // 'image' => 'required',
+            'productImage' => 'required|url'
         ], [
             'productName.required' => 'productName can\'t be empty!',
             'productID.required' => 'productID can\'t be empty!',
             'owner.required' => 'owner can\'t be empty!',
             'location.required' => 'location can\'t be empty!',
             'description.required' => 'Description can\'t be empty!',
-            // 'image.required' => 'Image can\'t be empty!'
+            'productImage.required' => 'Image can\'t be empty!'
         ]);
 
-        // Handle image upload and encoding here if necessary
+        $imageBase64 = $this->imageToBase64($request->productImage);
+
+        if (!$imageBase64) {
+            return redirect('/')->with('error', 'Failed to process the image.');
+        }
 
         Employee::create([
             'productName' => $request->productName, 
@@ -52,7 +56,7 @@ class EmployeeController extends Controller // Use the correct class name
             'owner' => $request->owner,
             'location' => $request->location,
             'description' => $request->description,
-            // 'image' => $imageBase64,
+            'image' => $imageBase64,
         ]);
 
         return redirect('/show')->with('success', 'Successfully added!');
