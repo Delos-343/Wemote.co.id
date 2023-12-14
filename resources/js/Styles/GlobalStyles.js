@@ -69,6 +69,7 @@ body {
   left: 7rem;
   width: 50vw;
   max-width: 250px;
+  border-radius: 0.375rem;
 }
 
 .watch-image__two {
@@ -76,6 +77,7 @@ body {
   right: 14rem;
   width: 20vw;
   max-width: 180px;
+  border-radius: 0.375rem;
 }
 
 .watch-image__three {
@@ -83,6 +85,7 @@ body {
   right: 16rem;
   width: 30vw;
   max-width: 90px;
+  border-radius: 0.375rem;
 }
 
 @media screen and (max-width: 876px) {
@@ -105,10 +108,12 @@ body {
   .watch-image__one {
     top: -5rem;
     width: 80vw;
+    border-radius: 0.375rem;
   }
 
   .watch-image__two {
     right: 0rem;
+    border-radius: 0.375rem;
   }
 
   .watch-image__three {
@@ -116,6 +121,7 @@ body {
     bottom: auto;
     right: -5rem;
     width: 50vw;
+    border-radius: 0.375rem;
   }
 }
 `;
