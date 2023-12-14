@@ -20,12 +20,14 @@ class EmployeeController extends Controller // Use the correct class name
             'owner' => 'required',
             'location' => 'required',
             'description' => 'required',
+            'productImage' => 'required',
         ], [
             'productName.required' => 'productName can\'t be empty!',
             'productID.required' => 'productID can\'t be empty!',
             'owner.required' => 'owner can\'t be empty!',
             'location.required' => 'location can\'t be empty!',
             'description.required' => 'Description can\'t be empty!',
+            'productImage.required' => 'productImage can\'t be empty!',
         ]);
 
         Employee::create([
@@ -34,6 +36,7 @@ class EmployeeController extends Controller // Use the correct class name
             'owner' => $request->owner,
             'location' => $request->location,
             'description' => $request->description,
+            'productImage' => $request->url,
         ]);
 
         return redirect('/show')->with('success', 'Successfully added!');
@@ -65,6 +68,7 @@ class EmployeeController extends Controller // Use the correct class name
             'owner' => 'required',
             'location' => 'required',
             'description' => 'required',
+            'productImage' => 'required',
         ]);
 
         $employee = Employee::findOrFail($id);
@@ -75,6 +79,7 @@ class EmployeeController extends Controller // Use the correct class name
             'owner' => $request->input('owner'),
             'location' => $request->input('location'),
             'description' => $request->input('description'),
+            'productImage' => $request->input('productImage')
         ]);
 
         return redirect('/show')->with('success', 'Employee updated successfully');
